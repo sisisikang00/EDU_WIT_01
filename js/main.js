@@ -19,3 +19,6 @@
   },{rootMargin:'-45% 0px -50% 0px'});
   Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s)});
 })();
+
+// 조금 내려가면 위/아래 버튼 보이기
+(function(){var j=document.querySelector('.jump');function f(){j.classList.toggle('show',window.scrollY>300)}f();window.addEventListener('scroll',f,{passive:true})})();
