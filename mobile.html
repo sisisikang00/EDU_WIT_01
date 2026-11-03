@@ -2,9 +2,8 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<script>// 넓은 화면이면 PC 버전으로 이동 (?view=mobile 로 모바일버전 강제 가능)
-if(window.innerWidth>=768&&!/view=mobile/.test(location.search))location.replace('index.html'+location.hash);</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>(function(){var w=Math.min(screen.width||9999,window.innerWidth||9999);var m=/Android|iPhone|iPod|Mobile|Windows Phone/i.test(navigator.userAgent)||w<768;if(!m&&!/view=mobile/.test(location.search))location.replace('index.html'+location.search+location.hash)})();</script>
 <title>EDWITT STUDIO | 프로그램 개발 & SNS 마케팅</title>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <meta name="description" content="EDWITT STUDIO(에듀윗 스튜디오)는 웹/앱 개발, 챗봇 개발, 교육콘텐츠 제작과 기업 SNS 마케팅을 제공합니다.">
