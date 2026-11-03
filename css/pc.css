@@ -57,6 +57,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .btn-line:hover{background:var(--ink);color:var(--bg)}
 .btn .arr{transition:transform .3s}
 .btn:hover .arr{transform:translate(3px,-3px)}
+.header .btn{min-width:170px;justify-content:center}
 
 /* 히어로 */
 .hero{position:relative;text-align:center;padding:72px 0 0;overflow:hidden;background:radial-gradient(ellipse at 50% 10%,var(--paper) 0,var(--bg) 70%)}
@@ -204,4 +205,6 @@ section.block{padding:clamp(72px,9vw,120px) 0}
   .finfo .wrap{grid-template-columns:1fr}
   .finfo .cs{padding-left:0;border-left:0}
 }
+.jump{opacity:0;pointer-events:none;transition:opacity .3s}
+.jump.show{opacity:1;pointer-events:auto}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}

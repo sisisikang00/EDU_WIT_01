@@ -57,6 +57,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .btn-line:hover{background:var(--ink);color:var(--bg)}
 .btn .arr{transition:transform .3s}
 .btn:hover .arr{transform:translate(3px,-3px)}
+.header .btn{min-width:170px;justify-content:center}
 
 /* 히어로 */
 .hero{position:relative;text-align:center;padding:72px 0 0;overflow:hidden;background:radial-gradient(ellipse at 50% 10%,var(--paper) 0,var(--bg) 70%)}
@@ -230,4 +231,66 @@ section.block{padding:clamp(72px,9vw,120px) 0}
   .finfo .etext b{font-size:19px;flex-wrap:wrap;white-space:normal}
   .finfo address{padding-left:0}
 
+/* ---- 모바일 최적화 보정 ---- */
+:root{--gut:20px}
+body{font-size:16px;line-height:1.7}
+.topbar{font-size:12.5px}
+.topbar .wrap{min-height:32px}
+.header .wrap{padding-top:10px;gap:4px 10px}
+.brand{font-size:19px}
+.header .btn{padding:8px 12px!important;font-size:13.5px!important;min-width:0!important}
+.nav{gap:20px;font-size:15px;padding-bottom:8px}
+.nav a{padding:4px 0}
+.jump{right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));gap:8px}
+.jump button{width:40px;height:40px}
+.jump svg{width:18px;height:18px}
+.hero{padding-top:36px}
+.hero-kicker{font-size:14.5px;padding:8px 16px 8px 14px;margin-bottom:34px}
+.hero h1{font-size:19vw}
+.slogan{font-size:23px;margin-top:24px}
+.hero-sub{font-size:15.5px;margin-top:14px}
+.cta-group{display:grid;width:100%}
+.hero-cta{margin-top:24px;gap:8px}
+.hero-cta .btn{padding:13px 8px;font-size:15px}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+.chips li{font-size:12.5px;padding:7px 4px;text-align:center;white-space:nowrap;letter-spacing:-.04em}
+.collage{margin-top:36px}
+.main-shot{border-radius:12px;aspect-ratio:4/3}
+.social{top:-20px;right:calc(var(--gut) + 10px);transform:scale(.8)}
+section.block{padding:64px 0}
+.sec-head h2{font-size:38px}
+.lead{margin:20px 0 32px;gap:12px}
+.lead h3{font-size:22px}
+.lead p{font-size:16px}
+.svc h3{font-size:24px}
+.svc .desc{font-size:16px}
+.svc li{font-size:16px;padding:12px 0}
+.stack li{font-size:13.5px!important;padding:5px 11px!important}
+.steps li::before{font-size:40px;margin-bottom:10px}
+.steps h4{font-size:19px}
+.steps p{font-size:15.5px}
+.stats strong{font-size:60px}
+.stats p{font-size:16px}
+.work{gap:36px}
+.work h3{font-size:20px;margin-top:14px}
+.work p{font-size:15.5px}
+.c-head{gap:16px}
+.c-photo{width:88px;border-width:4px}
+.contact{gap:28px;margin-top:28px}
+.contact h3{font-size:22px;line-height:1.4}
+.contact dd{font-size:15px}
+.contact .wide{padding:14px 20px;font-size:16px}
+.partners .wrap{display:grid;grid-template-columns:repeat(2,1fr);justify-items:center;gap:16px 12px}
+.partners img{height:30px}
+.finfo .wrap{gap:14px;padding-top:24px;padding-bottom:24px}
+.finfo .elogo svg{width:48px}
+.finfo .etext b{font-size:17px}
+.finfo .etext small{font-size:13px}
+.finfo .cs b{font-size:13px}
+.finfo .cs a{font-size:18px}
+.finfo address{font-size:13px;line-height:1.75;word-break:break-all}
+.sub-foot{font-size:12px}
+
+.jump{opacity:0;pointer-events:none;transition:opacity .3s}
+.jump.show{opacity:1;pointer-events:auto}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
